@@ -6,7 +6,7 @@ This is useful for demoing of tools, or otherwise taking screenshots of pages th
 
 ## Installation
 
-Download the [obfuscate-adobe.zip file](/jasonfordAdobe/obfuscate-chrome-extension/releases), and use [Load Unpacked](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/) within Chrome to load the plugin.
+Download the [obfuscate-adobe.zip file](https://github.com/jasonfordAdobe/obfuscate-chrome-extension/releases), and use [Load Unpacked](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/) within Chrome to load the plugin.
 
 ## What you get
 
@@ -29,6 +29,12 @@ And makese use of:
 -   [Tyepscript](https://github.com/microsoft/TypeScript)
 -   [SASS](https://github.com/sass/sass)
 -   [Adobe React Spectrum](https://github.com/adobe/react-spectrum)
+
+## For Developers
+
+There are build scripts for the popup, as well as the whole thing. The popup is it's own React app.
+
+Most of the time you can [Load Unpacked](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/) from the build folder, and then just run `sh build-popup.sh` and then refresh inside of Chrome.
 
 ## Further Development
 
