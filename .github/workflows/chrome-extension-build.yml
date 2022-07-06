@@ -17,8 +17,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: apt-get update
-      - run: apt-get install zip -y
+      - run: sudo apt-get update
+      - run: sudo apt-get install zip -y
       # - run: yarn install
       # - run: ls
       # - run: yarn build
