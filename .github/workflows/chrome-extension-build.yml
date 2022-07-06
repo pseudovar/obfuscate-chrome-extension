@@ -24,13 +24,6 @@ jobs:
       # - run: yarn build
       - run: ls -la
       - run: zip --version
-      - name: Package Chrome Extension
-        uses: thedoctor0/zip-release@main
-        with:
-          type: 'zip'
-          filename: 'obfuscate-adobe.cxr'
-          path: './build'
-      - run: echo "Created the packed CXR"
       - name: Zipped Chrome Extension
         uses: thedoctor0/zip-release@main
         with:
@@ -41,7 +34,7 @@ jobs:
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
-          body: 'Download either the .CXR and install directly into Chrome, or download the zip, unzip and load unpacked.'
-          artifacts: './obfuscate-adobe.cxr,./obfuscate-adobe.zip'
+          body: 'Download obfuscate-adobe.zip, unzip and use Chrome Extensions -> Load Unpacked.'
+          artifacts: './obfuscate-adobe.zip'
           removeArtifacts: true
       - run: echo "🍏 This job's status is ${{ job.status }}."

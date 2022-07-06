@@ -1,24 +1,21 @@
 :root {
-    --obfuscate-filter: blur(2px);
+    --obfuscate-filter: blur(0.2em);
   }
   
   /* SWAT Project List Page */
   #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:first-child span,
   #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:nth-child(2) span,
   #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:nth-child(3) span {
-    color: transparent !important;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+    filter: var(--obfuscate-filter);
   }
   
   /* SWAT Project Page */
   .MuiPopover-root .MuiPopover-paper .MuiMenuItem-root a {
-    color: transparent !important;
-    text-shadow: 0 0 5px #007bff !important;
+    filter: var(--obfuscate-filter);
   }
   
   h1.spectrum-Heading.spectrum-Heading--display {
-    color: transparent !important;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+    filter: var(--obfuscate-filter);
   }
   
   #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-0] .spectrum-Accordion-itemContent > div > div:nth-child(2) {
