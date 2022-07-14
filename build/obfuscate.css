@@ -1,54 +1,53 @@
 :root {
-    --obfuscate-filter: blur(0.2em);
-  }
-  
-  /* SWAT Project List Page */
-  #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:first-child span,
-  #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:nth-child(2) span,
-  #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:nth-child(3) span {
-    filter: var(--obfuscate-filter);
-  }
-  
-  /* SWAT Project Page */
-  .MuiPopover-root .MuiPopover-paper .MuiMenuItem-root a {
-    filter: var(--obfuscate-filter);
-  }
-  
-  h1.spectrum-Heading.spectrum-Heading--display {
-    filter: var(--obfuscate-filter);
-  }
-  
-  #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-0] .spectrum-Accordion-itemContent > div > div:nth-child(2) {
-    filter: var(--obfuscate-filter);
-  }
-  #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:nth-child(2) .spectrum-Accordion-itemContent > div > div:nth-child(2) {
-    filter: var(--obfuscate-filter);
-  }
-  #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:nth-child(5) .react-spectrum-TableView-body div .react-spectrum-TableView-row > div:first-child {
-    filter: var(--obfuscate-filter);
-  }
-  #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:nth-child(2) > div:nth-child(4) .react-spectrum-TableView-body div {
-    filter: var(--obfuscate-filter);
-  }
-  
-  /* New Relic One */
-  .AAK4AC-wnd-LocalArea-titleActions,
-  .AAK4AC-wnd-DropdownSection {
-    filter: var(--obfuscate-filter);
-  }
-  
-  body > [class*=-wnd-Dropdown-overlay]:not([class*=-ProductNavigation-]) > [class*=-wnd-PopoverBody-content] > [class*=-wnd-Dropdown-list] > [class*=-wnd-PopoverList-content] > [class*=-wnd-PopoverList-section]:last-child {
-    filter: var(--obfuscate-filter);
-  }
-  
-  [class*=-wnd-LocalArea-titleActions] span[class*=-wnd-EntityMetadataArea] > span {
-    filter: var(--obfuscate-filter);
-  }
-  
-  [class*=-TableViewContainer-accountName] {
-    filter: var(--obfuscate-filter);
-  }
-  
-  [class*=-wnd-AppNavigation] [class*=-wnd-DropdownTrigger-button-title] {
-    filter: var(--obfuscate-filter);
-  }  
+  --obfuscate-filter: blur(0.2em);
+}
+
+/* SWAT Project List Page */
+#root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:first-child span, #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:nth-child(2) span, #root .MuiPaper-root .MuiTable-root .MuiTableBody-root tr td:nth-child(3) span {
+  filter: var(--obfuscate-filter);
+}
+
+/* SWAT Project Page */
+.MuiPopover-root .MuiPopover-paper .MuiMenuItem-root a {
+  filter: var(--obfuscate-filter);
+}
+
+h1.spectrum-Heading.spectrum-Heading--display {
+  filter: var(--obfuscate-filter);
+}
+
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-0] .spectrum-Accordion-itemContent > div > div:nth-child(2) {
+  filter: var(--obfuscate-filter);
+}
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:nth-child(2) .spectrum-Accordion-itemContent > div > div:nth-child(2) {
+  filter: var(--obfuscate-filter);
+}
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:nth-child(5) .react-spectrum-TableView-body div .react-spectrum-TableView-row > div:first-child {
+  filter: var(--obfuscate-filter);
+}
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:nth-child(2) > div:nth-child(4) .react-spectrum-TableView-body div {
+  filter: var(--obfuscate-filter);
+}
+
+#react-spectrum-19 > div:nth-child(7) > div:nth-child(2) > div, #react-spectrum-19 > div:nth-child(8) > div:nth-child(2) > div, #react-spectrum-19 > div:nth-child(9) > div:nth-child(2) > div {
+  filter: var(--obfuscate-filter);
+}
+
+/* New Relic One */
+.AAK4AC-wnd-LocalArea-titleActions,
+.AAK4AC-wnd-DropdownSection,
+[class*=-TableViewContainer-accountName] {
+  filter: var(--obfuscate-filter);
+}
+
+[class*=-wnd-Dropdown-overlay]:not([class*=-ProductNavigation-]) > [class*=-wnd-PopoverBody-content] > [class*=-wnd-Dropdown-list] > [class*=-wnd-PopoverList-content] > [class*=-wnd-PopoverList-section]:last-child {
+  filter: var(--obfuscate-filter);
+}
+
+[class*=-wnd-LocalArea-titleActions] span[class*=-wnd-EntityMetadataArea] > span {
+  filter: var(--obfuscate-filter);
+}
+
+[class*=-wnd-AppNavigation] [class*=-wnd-DropdownTrigger-button-title] {
+  filter: var(--obfuscate-filter);
+}

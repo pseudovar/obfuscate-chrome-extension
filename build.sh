@@ -34,6 +34,7 @@ tsc worker/background.ts --outDir $OUTPUT_DIR
 
 # build content
 echo "(5/5) Building content scripts..."
+sass --no-source-map content_scripts/obfuscate.scss content_scripts/obfuscate.css
 cd content_scripts || exit
 cp obfuscate.css ../$OUTPUT_DIR/obfuscate.css
 cd ../
