@@ -30,6 +30,9 @@
   #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:nth-child(2) > div:nth-child(4) .react-spectrum-TableView-body div {
     filter: var(--obfuscate-filter);
   }
+  #react-spectrum-19 > div:nth-child(7) > div:nth-child(2) > div {
+      filter: var(--obfuscate-filter);
+  }
   
   /* New Relic One */
   .AAK4AC-wnd-LocalArea-titleActions,
