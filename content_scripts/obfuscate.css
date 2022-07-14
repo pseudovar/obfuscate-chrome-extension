@@ -36,6 +36,9 @@
   #react-spectrum-19 > div:nth-child(8) > div:nth-child(2) > div {
       filter: var(--obfuscate-filter);
   }
+  #react-spectrum-19 > div:nth-child(9) > div:nth-child(2) > div {
+      filter: var(--obfuscate-filter);
+  }
   
   /* New Relic One */
   .AAK4AC-wnd-LocalArea-titleActions,
