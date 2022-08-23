@@ -1,6 +1,20 @@
 import React, { FC, useState } from 'react';
 import ExtensionState from './components/ExtensionState';
-import { Button, defaultTheme, Provider, View, Content, Heading, Text, Grid, Flex, Link } from '@adobe/react-spectrum';
+import {
+  Button,
+  defaultTheme,
+  Provider,
+  View,
+  Content,
+  Heading,
+  Text,
+  Grid,
+  Flex,
+  Link,
+  ActionButton,
+} from '@adobe/react-spectrum';
+import AlertAdd from '@spectrum-icons/workflow/AlertAdd';
+import Info from '@spectrum-icons/workflow/Info';
 
 const App: FC = () => {
   const [enabled, setEnabled] = useState(false);
@@ -51,16 +65,31 @@ const App: FC = () => {
           <Content>
             <Flex justifyContent="space-between" alignItems="center">
               <Heading level={1}>Adobe Obfuscate</Heading>
-              {updateAvailable && (
-                <Link>
-                  <a
-                    href="https://github.com/jasonfordAdobe/obfuscate-chrome-extension"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Update Available &#128279;
-                  </a>
-                </Link>
+              {updateAvailable ? (
+                <Button
+                  variant="negative"
+                  onPress={() => {
+                    chrome.tabs.create({
+                      url: 'https://github.com/jasonfordAdobe/obfuscate-chrome-extension/releases',
+                    });
+                  }}
+                >
+                  <AlertAdd />
+                  <Text>Update Available</Text>
+                </Button>
+              ) : (
+                <Button
+                  variant="secondary"
+                  isQuiet={true}
+                  onPress={() => {
+                    chrome.tabs.create({
+                      url: 'https://github.com/jasonfordAdobe/obfuscate-chrome-extension/',
+                    });
+                  }}
+                >
+                  <Info />
+                  <Text>About</Text>
+                </Button>
               )}
             </Flex>
             <Text>Turning this on, will obfuscate company information on Adobe Commerce SWAT and New Relic.</Text>
