@@ -19,17 +19,22 @@ h1.spectrum-Heading.spectrum-Heading--display {
 #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-0] .spectrum-Accordion-itemContent > div > div:nth-child(2) {
   filter: var(--obfuscate-filter);
 }
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:first-child .spectrum-Accordion-itemContent > div:first-child > div:nth-child(2),
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:first-child .spectrum-Accordion-itemContent > div:nth-last-child(1) > div:nth-child(2),
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:first-child .spectrum-Accordion-itemContent > div:nth-last-child(2) > div:nth-child(2),
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:first-child .spectrum-Accordion-itemContent > div:nth-last-child(3) > div:nth-child(2) {
+  filter: var(--obfuscate-filter);
+}
 #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:nth-child(2) .spectrum-Accordion-itemContent > div > div:nth-child(2) {
   filter: var(--obfuscate-filter);
 }
 #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:first-child > div:nth-child(5) .react-spectrum-TableView-body div .react-spectrum-TableView-row > div:first-child {
   filter: var(--obfuscate-filter);
 }
-#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:nth-child(2) > div:nth-child(4) .react-spectrum-TableView-body div {
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:nth-child(2) > div:nth-child(2) .spectrum-Accordion-itemContent > div:last-child > div:last-child {
   filter: var(--obfuscate-filter);
 }
-
-#react-spectrum-19 > div:nth-child(7) > div:nth-child(2) > div, #react-spectrum-19 > div:nth-child(8) > div:nth-child(2) > div, #react-spectrum-19 > div:nth-child(9) > div:nth-child(2) > div {
+#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] .infoTab-grid > .infoTab-grid_column:nth-child(2) > div:nth-child(4) .react-spectrum-TableView-body div {
   filter: var(--obfuscate-filter);
 }
 

@@ -35,25 +35,30 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    chrome.storage.sync.get("enabled", function (_a) {
+    chrome.storage.sync.get('enabled', function (_a) {
         var enabled = _a.enabled;
         if (enabled) {
-            if (changeInfo.status === "complete") {
-                console.log("hello");
-                chrome.scripting.insertCSS({
+            if (changeInfo.status === 'complete') {
+                chrome.scripting
+                    .insertCSS({
                     target: { tabId: tabId },
-                    files: ["./obfuscate.css"]
-                }).then(function () {
-                    console.log("INJECTED THE FOREGROUND STYLES.");
+                    files: ['./obfuscate.css']
+                })
+                    .then(function () {
+                    console.log('INJECTED THE FOREGROUND STYLES.');
                 })["catch"](function (err) {
                     console.log(err);
                     //do nothing
                 });
             }
-            chrome.action.setIcon({ path: "icons/adobe-on-128.png" }, function () { console.log("turned on"); });
+            chrome.action.setIcon({ path: 'icons/adobe-on-128.png' }, function () {
+                console.log('turned on');
+            });
         }
         else {
-            chrome.action.setIcon({ path: "icons/adobe-off-128.png" }, function () { console.log("turned off"); });
+            chrome.action.setIcon({ path: 'icons/adobe-off-128.png' }, function () {
+                console.log('turned off');
+            });
         }
         checkExtUpdateAvailable().then(function (available) {
             if (available) {
@@ -68,7 +73,21 @@ chrome.runtime.onInstalled.addListener(function () {
     var enabled = true;
     chrome.storage.sync.set({ enabled: enabled });
     chrome.storage.sync.set({ updateAvailable: false });
-    console.log("Is the plugin enabled? " + enabled);
+    console.log('Is the plugin enabled? ' + enabled);
+    fetch('https://prod-125.westus.logic.azure.com/workflows/3efdce0379904460a92d941b73c0c01c/triggers/manual/paths/invoke/' +
+        curManifestVersion +
+        '/Installed?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Uxx8Ix_PY5OnuQUYP6GLm_vNcVIRaLXX_hwG0Z5iSgE')
+        .then(function (r) { return r.text(); })
+        .then(function (result) {
+        // Result now contains the response text, do what you want...
+    });
+    fetch('https://prod-125.westus.logic.azure.com/workflows/3efdce0379904460a92d941b73c0c01c/triggers/manual/paths/invoke/' +
+        curManifestVersion +
+        '/Enabled?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Uxx8Ix_PY5OnuQUYP6GLm_vNcVIRaLXX_hwG0Z5iSgE')
+        .then(function (r) { return r.text(); })
+        .then(function (result) {
+        // Result now contains the response text, do what you want...
+    });
 });
 function checkExtUpdateAvailable() {
     return __awaiter(this, void 0, void 0, function () {
@@ -83,7 +102,8 @@ function checkExtUpdateAvailable() {
                     json = _a.sent(), remoteManifestParts = json.version.split('.');
                     remoteIsNewer = false;
                     for (i = 0; i < remoteManifestParts.length; i++) {
-                        if (parseInt(remoteManifestParts[i], 10) > parseInt(curManifestVersion.split('.')[i], 10)) {
+                        if (parseInt(remoteManifestParts[i], 10) >
+                            parseInt(curManifestVersion.split('.')[i], 10)) {
                             remoteIsNewer = true;
                             break;
                         }

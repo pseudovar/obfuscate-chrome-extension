@@ -1,5 +1,5 @@
 :root {
-  --obfuscate-filter: blur(0.2em);
+    --obfuscate-filter: blur(0.2em);
 }
 
 @mixin obfuscate {
@@ -44,8 +44,8 @@ h1 {
     }
 }
 
-#react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-1] {
-    #react-spectrum-1-tabpanel[aria-labelledby=react-spectrum-1-tab-0] {
+#react-spectrum-1-tabpanel[aria-labelledby='react-spectrum-1-tab-1'] {
+    #react-spectrum-1-tabpanel[aria-labelledby='react-spectrum-1-tab-0'] {
         .spectrum-Accordion-itemContent {
             > div {
                 > div {
@@ -60,6 +60,21 @@ h1 {
         > .infoTab-grid_column {
             &:first-child {
                 > div {
+                    &:first-child {
+                        .spectrum-Accordion-itemContent {
+                            > div:first-child, // Project ID
+                            > div:nth-last-child(1), // Salesforce Opportunity ID
+                            > div:nth-last-child(2), // Mage ID
+                            > div:nth-last-child(3) // Salesforce Magento Account ID
+                            {
+                                > div {
+                                    &:nth-child(2) {
+                                        @include obfuscate;
+                                    }
+                                }
+                            }
+                        }
+                    }
                     &:nth-child(2) {
                         .spectrum-Accordion-itemContent {
                             > div {
@@ -88,7 +103,19 @@ h1 {
             }
             &:nth-child(2) {
                 > div {
+                    &:nth-child(2) {
+                        // Business
+                        .spectrum-Accordion-itemContent {
+                            > div:last-child {
+                                // Partner / SI Name
+                                > div:last-child {
+                                    @include obfuscate;
+                                }
+                            }
+                        }
+                    }
                     &:nth-child(4) {
+                        // Public Auth Debug
                         .react-spectrum-TableView-body {
                             div {
                                 @include obfuscate;
@@ -101,35 +128,19 @@ h1 {
     }
 }
 
-#react-spectrum-19 {
-    > div {
-        &:nth-child(7),
-        &:nth-child(8),
-        &:nth-child(9) {
-            > div {
-                &:nth-child(2) {
-                    > div {
-                        @include obfuscate;
-                    }
-                }
-            }
-        }
-    }
-}
-
 /* New Relic One */
 .AAK4AC-wnd-LocalArea-titleActions,
 .AAK4AC-wnd-DropdownSection,
-[class*=-TableViewContainer-accountName] {
+[class*='-TableViewContainer-accountName'] {
     @include obfuscate;
 }
 
-[class*=-wnd-Dropdown-overlay] {
-    &:not([class*=-ProductNavigation-]) {
-        > [class*=-wnd-PopoverBody-content] {
-            > [class*=-wnd-Dropdown-list] {
-                > [class*=-wnd-PopoverList-content] {
-                    > [class*=-wnd-PopoverList-section] {
+[class*='-wnd-Dropdown-overlay'] {
+    &:not([class*='-ProductNavigation-']) {
+        > [class*='-wnd-PopoverBody-content'] {
+            > [class*='-wnd-Dropdown-list'] {
+                > [class*='-wnd-PopoverList-content'] {
+                    > [class*='-wnd-PopoverList-section'] {
                         &:last-child {
                             @include obfuscate;
                         }
@@ -140,16 +151,16 @@ h1 {
     }
 }
 
-[class*=-wnd-LocalArea-titleActions] {
-    span[class*=-wnd-EntityMetadataArea] {
+[class*='-wnd-LocalArea-titleActions'] {
+    span[class*='-wnd-EntityMetadataArea'] {
         > span {
             @include obfuscate;
         }
     }
 }
 
-[class*=-wnd-AppNavigation] {
-    [class*=-wnd-DropdownTrigger-button-title] {
+[class*='-wnd-AppNavigation'] {
+    [class*='-wnd-DropdownTrigger-button-title'] {
         @include obfuscate;
     }
 }

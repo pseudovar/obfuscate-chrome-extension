@@ -1,19 +1,19 @@
 {
-  "name": "react-browser-extension",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "build": "./build.sh",
-    "build-popup": "./build-popup.sh",
-    "zip": "(rm adobe-obfuscate.zip || true) && zip -r adobe-obfuscate.zip build/"
-  },
-  "devDependencies": {
-    "@types/chrome": "^0.0.188",
-    "sass": "^1.53.0",
-    "web-ext": "^6.6.0"
-  },
-  "dependencies": {
-    "react-app-rewired": "^2.2.1",
-    "typescript": "^4.7.2"
-  }
+    "name": "react-browser-extension",
+    "version": "0.0.5",
+    "private": true,
+    "scripts": {
+        "build": "./build.sh",
+        "build-popup": "./build-popup.sh",
+        "zip": "(rm adobe-obfuscate.zip || true) && zip -r adobe-obfuscate.zip build/"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.188",
+        "sass": "^1.53.0",
+        "web-ext": "^6.6.0"
+    },
+    "dependencies": {
+        "react-app-rewired": "^2.2.1",
+        "typescript": "^4.7.2"
+    }
 }
