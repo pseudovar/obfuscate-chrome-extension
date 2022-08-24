@@ -23,7 +23,7 @@ Download the [obfuscate-adobe.zip file](https://github.com/jasonfordAdobe/obfusc
 
 This project is made using the setup provided by [abstractalgo/react-browser-extension](https://github.com/abstractalgo/react-browser-extension)
 
-And makese use of:
+And makes use of:
 
 -   [React](https://github.com/facebook/react)
 -   [Tyepscript](https://github.com/microsoft/TypeScript)
