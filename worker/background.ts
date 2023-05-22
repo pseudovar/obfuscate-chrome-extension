@@ -34,6 +34,16 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     })
 })
 
+chrome.webNavigation.onDOMContentLoaded.addListener(() => {
+    chrome.storage.sync.get('enabled', ({ enabled }) => {
+        if (enabled) {
+            console.log('here')
+            let target = document.body
+            console.log('target', target)
+        }
+    })
+})
+
 chrome.runtime.onInstalled.addListener(() => {
     let enabled = true
     chrome.storage.sync.set({ enabled })

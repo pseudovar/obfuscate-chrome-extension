@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "version": "0.0.5",
+    "version": "0.0.6",
     "name": "Obfuscate Adobe",
     "description": "Tool to hide secure data on Adobe services",
     "author": "Jason Ford <jasford@adobe.com",
@@ -11,7 +11,13 @@
         "48": "icons/adobe-on-48.png",
         "128": "icons/adobe-on-128.png"
     },
-    "permissions": ["tabs", "activeTab", "storage", "scripting"],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "scripting",
+        "webNavigation"
+    ],
     "host_permissions": [
         "https://swat.magento.com/*",
         "https://swat.prd.ceng.magento.com/*",

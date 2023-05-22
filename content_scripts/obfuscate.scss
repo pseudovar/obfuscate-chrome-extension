@@ -44,6 +44,26 @@ h1 {
     }
 }
 
+/* Dashboard -> Application Info -> Project ID */
+
+#react-spectrum-1-tabpanel[aria-labelledby='react-spectrum-1-tab-0'] {
+    .react-grid-item.cssTransforms.react-resizable-hide.react-resizable {
+        &:nth-child(6) {
+            .DashboardWidget-module_widgetContent__2FDeX {
+                ._spectrum-Table-row_60175 {
+                    &:nth-child(4) {
+                        ._spectrum-Table-cellWrapper_60175._react-spectrum-Table-cellWrapper_16293 {
+                            &:nth-child(2) {
+                                @include obfuscate();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #react-spectrum-1-tabpanel[aria-labelledby='react-spectrum-1-tab-1'] {
     #react-spectrum-1-tabpanel[aria-labelledby='react-spectrum-1-tab-0'] {
         .spectrum-Accordion-itemContent {
@@ -56,43 +76,45 @@ h1 {
             }
         }
     }
-    .infoTab-grid {
-        > .infoTab-grid_column {
-            &:first-child {
-                > div {
-                    &:first-child {
-                        .spectrum-Accordion-itemContent {
-                            > div:first-child, // Project ID
+    #react-spectrum-1-tabpanel[aria-labelledby='react-spectrum-1-tab-1'] {
+        .infoTab-grid {
+            > .infoTab-grid_column {
+                &:first-child {
+                    > div {
+                        &:first-child {
+                            .spectrum-Accordion-itemContent {
+                                > div:first-child, // Project ID
                             > div:nth-last-child(1), // Salesforce Opportunity ID
                             > div:nth-last-child(2), // Mage ID
                             > div:nth-last-child(3) // Salesforce Magento Account ID
-                            {
-                                > div {
-                                    &:nth-child(2) {
-                                        @include obfuscate;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    &:nth-child(2) {
-                        .spectrum-Accordion-itemContent {
-                            > div {
-                                > div {
-                                    &:nth-child(2) {
-                                        @include obfuscate;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    &:nth-child(5) {
-                        .react-spectrum-TableView-body {
-                            div {
-                                .react-spectrum-TableView-row {
+                                {
                                     > div {
-                                        &:first-child {
+                                        &:nth-child(2) {
                                             @include obfuscate;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            .spectrum-Accordion-itemContent {
+                                > div {
+                                    > div {
+                                        &:nth-child(2) {
+                                            @include obfuscate;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(5) {
+                            .react-spectrum-TableView-body {
+                                div {
+                                    .react-spectrum-TableView-row {
+                                        > div {
+                                            &:first-child {
+                                                @include obfuscate;
+                                            }
                                         }
                                     }
                                 }
@@ -100,25 +122,48 @@ h1 {
                         }
                     }
                 }
-            }
-            &:nth-child(2) {
-                > div {
-                    &:nth-child(2) {
-                        // Business
-                        .spectrum-Accordion-itemContent {
-                            > div:last-child {
-                                // Partner / SI Name
+                &:nth-child(2) {
+                    > div {
+                        &:nth-child(2) {
+                            // Business
+                            .spectrum-Accordion-itemContent {
                                 > div:last-child {
+                                    // Partner / SI Name
+                                    > div:last-child {
+                                        @include obfuscate;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(4) {
+                            // Public Auth Debug
+                            .react-spectrum-TableView-body {
+                                div {
                                     @include obfuscate;
                                 }
                             }
                         }
                     }
-                    &:nth-child(4) {
-                        // Public Auth Debug
-                        .react-spectrum-TableView-body {
-                            div {
-                                @include obfuscate;
+                }
+            }
+        }
+    }
+
+    #react-spectrum-1-tabpanel[aria-labelledby='react-spectrum-1-tab-2'] {
+        .infoTab-grid_column {
+            &:nth-child(2) {
+                > div {
+                    &:nth-child(3) {
+                        .spectrum-Accordion-itemContent {
+                            > div {
+                                &:nth-child(1),
+                                &:nth-child(2) {
+                                    > div {
+                                        &:nth-child(2) {
+                                            @include obfuscate;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
