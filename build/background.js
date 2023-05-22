@@ -69,6 +69,16 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
         });
     });
 });
+chrome.webNavigation.onDOMContentLoaded.addListener(function () {
+    chrome.storage.sync.get('enabled', function (_a) {
+        var enabled = _a.enabled;
+        if (enabled) {
+            console.log('here');
+            var target = document.body;
+            console.log('target', target);
+        }
+    });
+});
 chrome.runtime.onInstalled.addListener(function () {
     var enabled = true;
     chrome.storage.sync.set({ enabled: enabled });
