@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "version": "0.0.6",
+    "version": "0.0.7",
     "name": "Obfuscate Adobe",
     "description": "Tool to hide secure data on Adobe services",
     "author": "Jason Ford <jasford@adobe.com",
@@ -21,7 +21,8 @@
     "host_permissions": [
         "https://swat.magento.com/*",
         "https://swat.prd.ceng.magento.com/*",
-        "https://one.newrelic.com/*"
+        "https://one.newrelic.com/*",
+        "https://supportinsights.adobe.com/*"
     ],
     "action": {
         "default_popup": "popup.html"
